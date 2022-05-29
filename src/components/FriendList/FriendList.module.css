@@ -44,9 +44,9 @@
     background-color: green;
 }
 
-.notIsOnline {
+/* .notIsOnline {
     composes: isOnline;
-}
+} */
 
 .notIsOnline {
     margin-right: 10px;
