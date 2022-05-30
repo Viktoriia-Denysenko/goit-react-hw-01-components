@@ -1,4 +1,3 @@
-import StatisticsList from './StatisticsList';
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 import getRandomHexColor from './randomColor';
@@ -14,7 +13,8 @@ function Statistics({ title, stats }) {
             className={s.item}
             style={{ backgroundColor: getRandomHexColor() }}
           >
-            <StatisticsList label={item.label} percentage={item.percentage} />
+            <span className={s.label}>{item.label}</span>
+            <span className={s.percentage}>{item.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -25,7 +25,11 @@ function Statistics({ title, stats }) {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.string.isRequired })
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
   ),
 };
 
