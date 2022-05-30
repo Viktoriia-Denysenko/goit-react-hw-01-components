@@ -8,8 +8,6 @@ import transactions from './TransactionHistory/transactionHistory.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
-  // const isOnline = true;
-
   return (
     <div>
       <Profile
